@@ -1,0 +1,50 @@
+
+      
+
+<div class="testbox">
+    <form >
+      <div class="banner">
+        <h1>Job Application Form</h1>
+      </div>
+      <p class="top-info">Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+      <div class="item">
+        <p>Name<span class="required">*</span></p>
+        <div class="name-item">
+          <input type="text" name="cv.name" [(ngModel)]="cv.name" placeholder="First" required/>
+          <input type="text" name="cv.last" [(ngModel)]="cv.last" placeholder="Last" required/>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="item">
+          <p>Email<span class="required">*</span></p>
+          <input type="text" name="cv.email" [(ngModel)]="cv.email" required/>
+        </div>
+        <div class="item">
+          <p>Phone<span class="required">*</span></p>
+          <input type="text" name="cv.phone"  [(ngModel)]="cv.phone" required/>
+        </div>
+      </div>
+      <div class="position-item">
+        
+        <div class="item">
+          <p>Available start date<span class="required">*</span></p>
+          <input type="date" name="cv.availablestart" [(ngModel)]="cv.availablestart" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+      </div>
+      
+      <div class="item">
+        <p>Submit your resume by providing your resume URL or attach file:</p>
+        <input type="text" name="providing"/>
+<input type="file" (change)="recuperFile($event)"  accept="file/*">
+<input type="file" (change)="recuperFile1($event)"  accept="file/*">
+    
+      </div>
+      
+      
+      <div class="btn-block">
+        <button type="submit" (click)="ajouter()">Apply For The Job</button>
+      </div>
+    </form>
+    
+  </div>
